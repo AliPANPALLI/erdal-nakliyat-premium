@@ -30,6 +30,21 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
 
+document.querySelectorAll("video").forEach((video) => {
+  const applyVideoOrientation = () => {
+    if (video.videoHeight > video.videoWidth) {
+      video.classList.add("portrait-video");
+      video.closest(".gallery-item, .media-large, .media-side")?.classList.add("portrait-media");
+    }
+  };
+
+  if (video.readyState >= 1) {
+    applyVideoOrientation();
+  } else {
+    video.addEventListener("loadedmetadata", applyVideoOrientation, { once: true });
+  }
+});
+
 const form = document.querySelector("#contactForm");
 if (form) {
   form.addEventListener("submit", (event) => {
