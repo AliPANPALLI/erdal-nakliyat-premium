@@ -303,6 +303,33 @@ button,input,textarea{font:inherit}
 .section{padding:110px 0}
 .section-soft{background:var(--cream)}
 .section-dark{color:#fff;background:var(--ink)}
+.local-seo{padding:0 0 110px}
+.local-seo-inner{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:70px;
+  align-items:start;
+  padding:44px;
+  border:1px solid var(--line);
+  border-radius:26px;
+  background:#fff;
+  box-shadow:0 18px 55px rgba(7,17,31,.07);
+}
+.local-seo h2{
+  margin-top:12px;
+  color:var(--ink);
+  font-family:"Syne",Arial,sans-serif;
+  font-size:clamp(30px,4vw,46px);
+  line-height:1.06;
+  letter-spacing:-.045em;
+}
+.local-seo p{color:var(--muted);font-size:16px}
+.local-seo a{
+  display:inline-block;
+  margin-top:20px;
+  color:var(--orange);
+  font-weight:800;
+}
 .section-head{
   display:flex;
   align-items:end;
@@ -553,6 +580,7 @@ button,input,textarea{font:inherit}
   .menu a{padding:13px}
   .menu a::after{display:none}
   .hero-grid,.split{grid-template-columns:1fr}
+  .local-seo-inner{grid-template-columns:1fr;gap:28px}
   .hero-grid{gap:52px}
   .hero-media{min-height:540px}
   .proof-inner{grid-template-columns:1fr 1fr}
@@ -591,6 +619,8 @@ button,input,textarea{font:inherit}
   .proof-item{padding:20px 17px}
   .proof-item strong{font-size:21px}
   .section{padding:78px 0}
+  .local-seo{padding-bottom:78px}
+  .local-seo-inner{padding:28px}
   .section-head{align-items:flex-start;flex-direction:column;margin-bottom:34px}
   .section-head h2,.text-block h2,.page-header h1{font-size:40px}
   .service-grid,.grid-3,.gallery-grid{grid-template-columns:1fr}
